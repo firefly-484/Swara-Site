@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Swara Warke</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,483;1,483&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #e2cbf9, #f7e8ff);
+            background-attachment: fixed;
+    }
+        html {
+        scroll-behavior: smooth;
+    }
+        /*
+            .opening {
+            background-color: rgb(85, 29, 102);
+            width: 700px;
+            height: 100px;
+            padding: 50px;
+            color: white;
+            border-radius: 12px;
+            margin:auto;
+            font-size: 80px;
+            text-align: center;
+        }
+        */
+    
+        
+
+        .navbar {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display:flex;
+            justify-content: space-between;
+            background: rgba(255,255,255,0.35);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            border: 1px solid rgba(255,255,255,0.4);
+            border-radius: 20px;
+            padding: 10px 30px;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: rgb(85, 29, 102);
+            margin-left: 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-family: playfair display;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+         .navbar a:hover {
+            transform: translateY(-5px);
+        }
+        .name {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+            font-family: poppins;
+            background: rgba(255,255,255,0.35);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            border: 1px solid rgba(255,255,255,0.4);
+            border-radius: 20px;
+            z-index: 1000;
+            padding: 10px 30px;
+        }
+        .name a {
+            text-decoration: none;
+            color: rgb(85, 29, 102);
+            margin-left: 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-family: playfair display;
+        }
+        h1{
+            text-align: center;
+            color: rgb(85, 29, 102);
+            font-family: playfair display;
+        }
+        .aboutme {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 50px;
+            
+        }
+        .aboutmetext {
+           background-color: rgb(255, 255, 255);
+            width: 1000px;
+            padding: 30px;
+            color: rgb(85, 29, 102);
+            border-radius: 25px;
+            margin:auto;
+            font-size: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            font-family: poppins;
+            border: 2px solid rgb(85, 29, 102);
+            transition: transform 0.3s ease;
+        }
+        .aboutmetext:hover {
+            transform: translateY(-5px);
+        }
+        .hobbies {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            gap: 20px;
+        }
+        .hobby1, .hobby2, .hobby3 {
+            background-color: rgb(255, 255, 255);
+            width: 300px;
+            padding: 20px;
+            color: rgb(85, 29, 102);
+            border-radius: 25px;
+            font-size: 16px;
+            font-family: poppins;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            border: 2px solid rgb(85, 29, 102);
+            transition: all 0.3s ease;
+        }
+        .hobby1:hover, .hobby2:hover, .hobby3:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(85,29,102,0.25);
+        }
+        h1{
+            margin-top: 100px; 
+            text-align: center;
+            color: rgb(85, 29, 102);
+            font-family: playfair display;
+            font-size: 50px;
+        }
+        h1::after {
+            content: "";
+            display: block;
+            width: 600px;
+            height: 2px;
+            background: rgb(85,29,102)  ;
+            margin: 18px auto 0;
+        }
+        .timelines {
+            position: relative;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+        .timelines::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background-color: rgb(85,29,102);
+            border-radius: 10px;
+        }
+        .timelineitem {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .year{
+            width:80px;
+            font-size:22px;
+            font-weight:bold;
+            color:rgb(85,29,102);
+            font-family:"Playfair Display", serif;
+        }
+
+        .timelineitem::before{
+            content:"";
+            width:18px;
+            height:18px;
+            background:white;
+            border:4px solid rgb(85,29,102);
+            border-radius:50%;
+            position:absolute;
+            left:71px;
+            top:10px;
+        }
+
+        .content{
+            margin-left:70px;
+            background:white;
+            padding:20px 25px;
+            border-radius:20px;
+            box-shadow:0 8px 25px rgba(0,0,0,0.12);
+            border:2px solid rgb(85,29,102);
+            font-family:Poppins;
+            transition:.3s;
+        }
+
+        .content:hover{
+            transform:translateY(-6px);
+            box-shadow:0 15px 35px rgba(85,29,102,0.25);
+        }
+        .sparkle {
+            position: fixed;
+            width: 5px;
+            height: 5px;
+            background: #a465c9;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: sparkleFade 1s forwards;
+                0 0 5px white,
+                0 0 10px #d8b4ff,
+                0 0 15px #c084fc;
+        }
+
+        @keyframes sparkleFade {
+            0% {
+                opacity: 1;
+                transform: rotate(45deg) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: rotate(45deg) scale(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id = "top" class="opening">
+        <img src="thebanner.png" alt="Banner Image" style="width:100%; height:auto;">
+    </div>
+    <div class = "name">
+            <a href="#top">Swara Warke</a>
+    </div>
+    <div class="navbar">
+        <div class = "links">
+            <a href="#about">About</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#projects">Projects</a>
+            <a href="#awards">Awards/Leadership</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+   
+    <h1 id="about" class="about">About Me</h1>
+    <div class = "aboutme">
+        <img src="c:\Users\warke\Downloads\IMG_0517.jpeg" style="width:300px; height:auto; border-radius: 50%; display:block; margin:auto; border: 2px solid rgb(85, 29, 102);">
+
+         <div class = "aboutmetext">
+            <p> Hello! My name is Swara Warke. I am a 9th grade student passionate about mathematics, music, and problem solving, and I enjoy balancing critical thinking with creativity.
+
+                Math is a major passion of mine. I love the process of thinking through challenging problems and exploring different solutions. I like challenging myself by working through problems and participating in competitions such as MathCounts and the AMC.
+
+                I am also deeply involved in the Arts. I have been playing piano for 8 years and sing in advanced choir ensembles, including being selected for All-State Chorus for 2 consecutive years, where I collaborated with high-performing musicians from across the state. I served as Chorus President in SFMS in the 2025-2026 school year, helping lead and support my peers. I also received the 2025 Hughston Foundation Art Gala Mental Health Award for my creative work.
+
+                In addition, I founded a coding club at my middle school using CodeHS to introduce students to programming. I have experience with Python and Java and enjoy exploring technology as a tool for problem-solving.
+
+                In my free time, I enjoy playing the piano or reading an interesting book!
+            </p>
+        </div>
+    </div>
+    <h1 id="hobbies">Swara's Hobbies and Interests</h1>
+    <div class = "hobbies">
+        <div class = "hobby1">
+            <h2>🧮 Math</h2>
+            <p> I love the process of thinking through challenging problems and exploring different solutions. I like challenging myself by working through problems and participating in competitions. I have participated in the AMC8 and 10 competition earning a score in the top 5% of AMC8. I have also participated in Mathcounts State, Integirls, Noetic, Math and AI 4 Girls, and many more competitions. I excel in mathematical reasoning and problem-solving.</p>
+        </div>
+        <div class = "hobby2">
+            <h2>🎵 Music & 🎨 Arts</h2>
+            <p> I have been playing piano for 10 years and sing in advanced choir ensembles, including being selected for All-State Chorus for 2 consecutive years, where I collaborated with high-performing musicians from across the state. I served as Chorus President at South Forsyth Middle School in the 2025-2026 school year, helping lead and support my peers. I also received the 2025 Hughston Foundation Art Gala Mental Health Award for my creative work.</p>
+        </div>
+        <div class = "hobby3">
+            <h2>💻 Coding</h2>
+            <p> I enjoy exploring technology through programming and using code to solve real-world problems. I have experience with Python and Java and founded a coding club at my middle school using CodeHS to introduce students to programming. I am currently expanding my skills in web development by learning HTML and CSS and creating my own websites. I am also interested in using Hackpad and participating in Stardance by NASA to explore coding in other aspects of technology.</p>
+        </div>
+    </div>
+    <h1 id="projects">Swara's Projects</h1>
+    <div class="hobbies">
+        <div class = "hobby1">
+            <h2> 🌐Website Development</h2>
+            <p> I am currently learning web development and exploring how to create engaging websites. I have created a simple portfolio website using HTML and CSS through the StarDance Program. This project taught me how to design interactive and interesting web pages from scratch using code. I have also created the website for the Nonprofit Organization, Mrida USA using online web development tools.  *Link to website*    *Link to Mrida USA*  </p>
+        </div>
+        <div class = "hobby2">
+            <h2> 💬AI Chatbots for Businesses</h2>
+            <p> I collaborated with local businesses, including Desi Street and Universal Cuts, to create sample AI chatbots using Botpress. I used their sample problem cards and common customer questions to build chatbots that could help solve their most frequent issues. After each version, I presented the chatbot to the business owners, got their feedback, and made changes to improve the chatbot based on their suggestions. I am currently working on getting the chatbots live on their websites.</p>
+        </div>
+        <div class = "hobby3">
+            <h2> 🪛Hardware Projects</h2>
+            <p> I enjoy designing and building hardware projects that combine creativity with technical skills. I am using Stardance and Hackclub to explore how to create hardware projects that can be used in real-world applications. My next project is to design a hackpad pcb that I will program to do specific tasks. This can be anything from using them for shortcuts, custom keybinds, or even creating a small game controller. I am excited to explore the possibilities of hardware development and learn how to bring my ideas to life.</p>
+        </div>
+    </div>
+    <h1 id="awards">Awards and Leadership</h1>
+    <div class = "timelines">
+        <div class = "timelineitem">
+            <div class="year"> 2024 - 2026</div>
+            <div class="content">
+                <h3>Founded SFMS Coding Club</h3>
+                <p>I founded my middle school's Coding Club to introduce students to computer science through interactive lessons and hands-on coding projects. As Founder and President, I organized meetings, developed beginner-friendly lessons using CodeHS, and created an engaging environment where students could learn programming and problem-solving together.</p>
+            </div>
+        </div>
+    
+
+        <div class="timelineitem">
+            <div class="year"> 2025 - 2026</div>
+            <div class="content">
+                <h3>Chorus President</h3>
+                <p>Led the chorus program while organizing and supporting fellow students.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            const sparkle = document.createElement('div');
+            sparkle.className = "sparkle";
+
+            sparkle.style.left = e.clientX + "px";
+            sparkle.style.top = e.clientY + "px";
+
+            document.body.appendChild(sparkle);
+        });
+    </script>
+
+</body>
+
+
+</html>
